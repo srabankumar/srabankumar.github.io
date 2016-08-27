@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Air-escape 2"
+date: 2016-08-24 21:46:57 +0530
+comments: true
+categories: 
+---
+Hi Viewers,
+
+Before going to describe about the second version of my game let me describe a small intro about my first game. Actually my first game is a small helicopter game in which u have to overcome various obstacles to reach the destination to win it (Not a great game at all).When i started learning javascript and jquery ,then i decided to create that game .It is just simple game without canvas.
+
+some drawbacks of my first game:
+
+1)Obstacles are static
+
+2)no level (means difficulty level)
+
+3)No score and many more
+
+To Avoid such drawbacks ,i started learning HTML canvas and more on javascript so that i can rectify my errors in the next game.Then I created the second version of that game by using canvas to make it a beautiful one. Then after working for 2 days ,i successfully created the second version of that game by adding some more features in it.Those are:
+
+1)moving objects(obstacles)
+
+2)Three Difficulty level(easy,medium and hard)
+
+3)Score board
+
+4)more attractive background than previous one
+
+5)Reset Button to play again..
+

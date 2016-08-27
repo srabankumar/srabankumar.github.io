@@ -1,0 +1,22 @@
+body
+{
+	background-color:purple;
+}
+
+p
+{
+	font-size: 20px;
+	color: rgb(255,255,255);
+}
+
+h2
+{
+	color: yellow;
+
+}
+.largeicon
+{
+	font-size: 25px;
+	padding-left: 35px;
+	padding-right: 35px;
+}

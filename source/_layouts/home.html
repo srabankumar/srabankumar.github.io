@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include custom/myHead.html %}
+</head>
+<body class="bgColor">
+    {% include custom/myHeader.html %}
+  {{ content }}
+
+
+{% include custom/myfooter.html %}
+<script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="/javascripts/contentHover.js"></script>
+<script type="text/javascript">
+    var Path = window.location.pathname;
+    if(Path === '/skills')
+        {
+            $('.bgColor').css('background-color','purple');
+            $('.headColor').css('background-color','#E0A060');
+        }
+      if(Path === '/')
+        {
+            $('.bgColor').css('background-color','#203090');
+            $('.headColor').css('background-color','#00ffe6');
+        }
+     if(Path === '/mystuffs')
+         {
+             $('.bgColor').css('background-color','purple');
+            $('.headColor').css('background-color','#D0A000');
+         }
+	$('#d1').contenthover({
+    overlay_background:'#000',
+    overlay_opacity:0.8
+	});
+	
+</script>
+
+
+</body>
+</html>
