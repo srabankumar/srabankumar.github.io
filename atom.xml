@@ -4,7 +4,7 @@
   <title><![CDATA[My Notebook]]></title>
   <link href="http://srabankumar.github.io/atom.xml" rel="self"/>
   <link href="http://srabankumar.github.io/"/>
-  <updated>2016-08-27T17:13:02+05:30</updated>
+  <updated>2016-08-27T17:27:14+05:30</updated>
   <id>http://srabankumar.github.io/</id>
   <author>
     <name><![CDATA[sraban]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How I Dive Into Python World]]></title>
+    <link href="http://srabankumar.github.io/blog/2016/08/27/how-i-dive-into-python-world/"/>
+    <updated>2016-08-27T17:24:52+05:30</updated>
+    <id>http://srabankumar.github.io/blog/2016/08/27/how-i-dive-into-python-world</id>
+    <content type="html"><![CDATA[<p> Apart from some technical stuff ,now i want to share something else that is &ldquo;How i dive into python world&rdquo;. Actually before entering to college,i know python is something that we hear from our childhood.I was only stick with &ldquo;C&rdquo; and &ldquo;C++&rdquo;. I heard about &ldquo;PYTHON&rdquo; from one of my friend. Then in curiosity,I started learning it and soon i find it is more easier and flexible than other programming languages.The most important feature of python which attracts me most is it is open-source.Soon i fell love with it and i started writing programs with it and i love to do that.I started learning it from various sources like python docs which is available in python.org website,video tutorial from the &ldquo;NEW BOSTON&rdquo;,and books like think python,byte of python and many more.. Web-development is also easy with it by it&rsquo;s &ldquo;DJANGO&rdquo; framework and &ldquo;pygame&rdquo; helps users to creates interactive games. There are many python user group almost in every countries and cities around the world . They also organize some event almost in every year in which they discuss about various stuffs,talks and organize some workshop based upon python.India also organize &ldquo;PYCOON INDIA&#8221;in which the python users join and share their knowledge and i think it is the beauty of to be a part of the open-source family . Afterall,I feel lucky to be a part of this family.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A Funny App]]></title>
