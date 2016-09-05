@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Notebook]]></title>
-  <link href="http://srabankumar.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Octopress, | My Notebook]]></title>
+  <link href="http://srabankumar.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://srabankumar.github.io/"/>
   <updated>2016-09-05T19:58:46+05:30</updated>
   <id>http://srabankumar.github.io/</id>
@@ -163,48 +163,6 @@ Make sure that `gem install fast-stemmer -v '1.0.2'` succeeds before bundling.
 <p> <a href="https://github.com/imathis/octopress/wiki/Installation-Instructions-2.0-on-Windows">https://github.com/imathis/octopress/wiki/Installation-Instructions-2.0-on-Windows</a>
  <a href="https://github.com/oneclick/rubyinstaller/wiki/Troubleshooting">https://github.com/oneclick/rubyinstaller/wiki/Troubleshooting</a>
  <a href="http://stackoverflow.com/questions/27239491/cannot-install-gem-make-is-not-recognized-as-an-internal-or-external-command-o/33442847#33442847">http://stackoverflow.com/questions/27239491/cannot-install-gem-make-is-not-recognized-as-an-internal-or-external-command-o/33442847#33442847</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A Funny App]]></title>
-    <link href="http://srabankumar.github.io/blog/2016/08/24/a-funny-app/"/>
-    <updated>2016-08-24T21:49:04+05:30</updated>
-    <id>http://srabankumar.github.io/blog/2016/08/24/a-funny-app</id>
-    <content type="html"><![CDATA[<p>Hello folks,</p>
-
-<p>After making of two games ,I have completely fallen in love with canvas and javascript .So i had decided to make another game by using this.This time i thought to make a funny simple game. So i have decided to make a game name as “KNOW YOUR STRENGTH” .Actually In this game a button is attached with a meter containing a ball inside it. You have to hit that button with a hammer .As u hit that button ,the ball inside the meter grows up.The meter is divided into 4 part named as “WEAK”,”AVERAGE”,”STRONG”,”SUPER STRONG”.The ball inside the meter stops in a definite part and according to that part the meter gives your strength. So simple game.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Air-escape 2]]></title>
-    <link href="http://srabankumar.github.io/blog/2016/08/24/air-escape-2/"/>
-    <updated>2016-08-24T21:46:57+05:30</updated>
-    <id>http://srabankumar.github.io/blog/2016/08/24/air-escape-2</id>
-    <content type="html"><![CDATA[<p>Hi Viewers,</p>
-
-<p>Before going to describe about the second version of my game let me describe a small intro about my first game. Actually my first game is a small helicopter game in which u have to overcome various obstacles to reach the destination to win it (Not a great game at all).When i started learning javascript and jquery ,then i decided to create that game .It is just simple game without canvas.</p>
-
-<p>some drawbacks of my first game:</p>
-
-<p>1)Obstacles are static</p>
-
-<p>2)no level (means difficulty level)</p>
-
-<p>3)No score and many more</p>
-
-<p>To Avoid such drawbacks ,i started learning HTML canvas and more on javascript so that i can rectify my errors in the next game.Then I created the second version of that game by using canvas to make it a beautiful one. Then after working for 2 days ,i successfully created the second version of that game by adding some more features in it.Those are:</p>
-
-<p>1)moving objects(obstacles)</p>
-
-<p>2)Three Difficulty level(easy,medium and hard)</p>
-
-<p>3)Score board</p>
-
-<p>4)more attractive background than previous one</p>
-
-<p>5)Reset Button to play again..</p>
 ]]></content>
   </entry>
   
