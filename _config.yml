@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://srabankumar.github.io
+url: https://srabankumar.github.io
 title: My Notebook
 subtitle: My knowledge sharing platform
 author: sraban
@@ -91,7 +91,7 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: "srabanblog"
+disqus_short_name: "srabankumar-github-io"
 disqus_show_comment_count: false
 
 # Google Analytics
