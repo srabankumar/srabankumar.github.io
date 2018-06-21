@@ -4,7 +4,7 @@
   <title><![CDATA[My Notebook]]></title>
   <link href="http://srabankumar.github.io/atom.xml" rel="self"/>
   <link href="http://srabankumar.github.io/"/>
-  <updated>2018-06-21T14:51:20+05:30</updated>
+  <updated>2018-06-21T14:54:16+05:30</updated>
   <id>http://srabankumar.github.io/</id>
   <author>
     <name><![CDATA[sraban]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Dummy]]></title>
-    <link href="http://srabankumar.github.io/blog/2018/06/21/dummy/"/>
-    <updated>2018-06-21T14:49:40+05:30</updated>
-    <id>http://srabankumar.github.io/blog/2018/06/21/dummy</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA['This' Keyword Under the Hood in Javascript]]></title>
