@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>'This' Keyword Under the Hood in Javascript - My Notebook</title>
+  <title>Dummy - My Notebook</title>
   <meta name="author" content="sraban">
 
   
-  <meta name="description" content="Hi Friends, In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/">
+  <link rel="canonical" href="http://srabankumar.github.io/blog/2018/06/21/dummy/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Notebook" type="application/atom+xml">
@@ -73,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">'This' Keyword Under the Hood in Javascript</h1>
+      <h1 class="entry-title">Dummy</h1>
     
     
       <p class="meta">
@@ -82,7 +83,7 @@
 
 
 
-<time class='entry-date' datetime='2018-06-21T11:59:25+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>11:59 am</span></time>
+<time class='entry-date' datetime='2018-06-21T14:49:40+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>2:49 pm</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://srabankumar.github.io">Comments</a>
@@ -92,76 +93,7 @@
   </header>
 
 
-<div class="entry-content"><p>Hi Friends,
-    In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post as simple as possible. let&rsquo;s jump into it .</p>
-
-<h3>concept-1</h3>
-
-<p>When we are declaring a variable or function in javascript it became a property of window object . In the global excution context &lsquo;this&rsquo; keyword always refer to &lsquo;window&rsquo; object. so example:</p>
-
-<pre><code>    var a = 'javascript';
-    console.log(a) // javascript
-    console.log(window.a) // javascript
-    console.log(this.a) // javascript
-    function xyz(){
-        console.log(this.a) 
-    }
-    xyz() // javascript
-</code></pre>
-
-<h3>concept-2</h3>
-
-<p>&ldquo;this&rdquo; keyword inside a method always refers to calling object .Example:</p>
-
-<pre><code>    var obj = {
-            name:'javascript',
-            print : function(){
-                console.log(this.name)
-            }
-        }
-        obj.print(); // javascript
-</code></pre>
-
-<p>Here object &lsquo;obj&rsquo; is calling &lsquo;print&rsquo; method. so &lsquo;this&rsquo; keyword inside print will refer to object &lsquo;obj&rsquo; .</p>
-
-<h3>concept-3</h3>
-
-<p>   When we are using a inner function inside a method then &lsquo;this&rsquo; keyword inside that inner function refers to &lsquo;window&rsquo; object, not calling object.</p>
-
-<p>Example:</p>
-
-<pre><code>    var name = 'window';
-    var obj = {
-            name:'javascript',
-            print : function(){
-                return function(){
-                    console.log(this.name)
-                }
-            }
-        }
-        obj.print()(); // window 
-</code></pre>
-
-<blockquote><p>Then how to fix this .</p></blockquote>
-
-<p>We have to assign &lsquo;this&rsquo; object to some other object inside print function.Now</p>
-
-<pre><code>    var name = 'window';
-    var obj = {
-            name:'javascript',
-            print : function(){
-                var self = this // here we assigned "this" object to self object.
-                return function(){
-                    console.log(self.name)
-                }
-            }
-        }
-        obj.print()(); // javascript
-</code></pre>
-
-<p>I hope these three concepts are clear now.</p>
-
-<p>Happy Coding :)</p>
+<div class="entry-content">
 </div>
 
 
@@ -177,21 +109,15 @@
 
 
 
-<time class='entry-date' datetime='2018-06-21T11:59:25+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>11:59 am</span></time>
+<time class='entry-date' datetime='2018-06-21T14:49:40+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>2:49 pm</span></time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/this-javascript/'>this,javascript</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/" data-via="" data-counturl="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://srabankumar.github.io/blog/2018/06/21/dummy/" data-via="" data-counturl="http://srabankumar.github.io/blog/2018/06/21/dummy/" >Tweet</a>
   
   
   
@@ -200,10 +126,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2016/09/05/windows-and-octopress-mystery/" title="Previous Post: Windows and octopress Mystery">&laquo; Windows and octopress Mystery</a>
+        <a class="basic-alignment left" href="/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/" title="Previous Post: 'this' keyword under the hood in javascript">&laquo; 'this' keyword under the hood in javascript</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2018/06/21/dummy/" title="Next Post: dummy">dummy &raquo;</a>
       
     </p>
   </footer>
@@ -284,8 +208,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/';
-        var disqus_url = 'http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/';
+        var disqus_identifier = 'http://srabankumar.github.io/blog/2018/06/21/dummy/';
+        var disqus_url = 'http://srabankumar.github.io/blog/2018/06/21/dummy/';
         var disqus_script = 'embed.js';
       
     (function () {
