@@ -9,7 +9,7 @@
   <meta name="author" content="sraban">
 
   
-  <meta name="description" content="Hi Folks, Octopress is one of the favourite tool for those( specially for Programmers) who loves to write and post something in a blog . If you are &hellip;">
+  <meta name="description" content="Hi Friends, In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,107 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/">'This' Keyword Under the Hood in Javascript</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2018-06-21T11:59:25+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>11:59 am</span></time>
+        
+           | <a href="/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/#disqus_thread"
+             data-disqus-identifier="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Hi Friends,
+    In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post as simple as possible. let&rsquo;s jump into it .</p>
+
+<h3>concept-1</h3>
+
+<p>When we are declaring a variable or function in javascript it became a property of window object . In the global excution context &lsquo;this&rsquo; keyword always refer to &lsquo;window&rsquo; object. so example:</p>
+
+<pre><code>    var a = 'javascript';
+    console.log(a) // javascript
+    console.log(window.a) // javascript
+    console.log(this.a) // javascript
+    function xyz(){
+        console.log(this.a) 
+    }
+    xyz() // javascript
+</code></pre>
+
+<h3>concept-2</h3>
+
+<p>&ldquo;this&rdquo; keyword inside a method always refers to calling object .Example:</p>
+
+<pre><code>    var obj = {
+            name:'javascript',
+            print : function(){
+                console.log(this.name)
+            }
+        }
+        obj.print(); // javascript
+</code></pre>
+
+<p>Here object &lsquo;obj&rsquo; is calling &lsquo;print&rsquo; method. so &lsquo;this&rsquo; keyword inside print will refer to object &lsquo;obj&rsquo; .</p>
+
+<h3>concept-3</h3>
+
+<p>   When we are using a inner function inside a method then &lsquo;this&rsquo; keyword inside that inner function refers to &lsquo;window&rsquo; object, not calling object.</p>
+
+<p>Example:</p>
+
+<pre><code>    var name = 'window';
+    var obj = {
+            name:'javascript',
+            print : function(){
+                return function(){
+                    console.log(this.name)
+                }
+            }
+        }
+        obj.print()(); // window 
+</code></pre>
+
+<blockquote><p>Then how to fix this .</p></blockquote>
+
+<p>We have to assign &lsquo;this&rsquo; object to some other object inside print function.Now</p>
+
+<pre><code>    var name = 'window';
+    var obj = {
+            name:'javascript',
+            print : function(){
+                var self = this // here we assigned "this" object to self object.
+                return function(){
+                    console.log(self.name)
+                }
+            }
+        }
+        obj.print()(); // javascript
+</code></pre>
+
+<p>I hope these three concepts are clear now.</p>
+
+<p>Happy Coding :)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2016/09/05/windows-and-octopress-mystery/">Windows and Octopress Mystery</a></h1>
     
     
@@ -86,6 +187,9 @@
 
 
 <time class='entry-date' datetime='2016-09-05T19:27:23+05:30'><span class='date'><span class='date-month'>Sep</span> <span class='date-day'>5</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>7:27 pm</span></time>
+        
+           | <a href="/blog/2016/09/05/windows-and-octopress-mystery/#disqus_thread"
+             data-disqus-identifier="http://srabankumar.github.io/blog/2016/09/05/windows-and-octopress-mystery/">Comments</a>
         
       </p>
     
@@ -260,6 +364,9 @@ Make sure that `gem install fast-stemmer -v '1.0.2'` succeeds before bundling.
 
 <time class='entry-date' datetime='2016-08-24T21:49:04+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:49 pm</span></time>
         
+           | <a href="/blog/2016/08/24/a-funny-app/#disqus_thread"
+             data-disqus-identifier="http://srabankumar.github.io/blog/2016/08/24/a-funny-app/">Comments</a>
+        
       </p>
     
   </header>
@@ -290,6 +397,9 @@ Make sure that `gem install fast-stemmer -v '1.0.2'` succeeds before bundling.
 
 
 <time class='entry-date' datetime='2016-08-24T21:46:57+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:46 pm</span></time>
+        
+           | <a href="/blog/2016/08/24/air-escape-2/#disqus_thread"
+             data-disqus-identifier="http://srabankumar.github.io/blog/2016/08/24/air-escape-2/">Comments</a>
         
       </p>
     
@@ -339,6 +449,10 @@ Make sure that `gem install fast-stemmer -v '1.0.2'` succeeds before bundling.
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/">'This' Keyword Under the Hood in Javascript</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/09/05/windows-and-octopress-mystery/">Windows and Octopress Mystery</a>
       </li>
     
@@ -363,7 +477,7 @@ Make sure that `gem install fast-stemmer -v '1.0.2'` succeeds before bundling.
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2016 - sraban -
+  Copyright &copy; 2018 - sraban -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
@@ -371,7 +485,7 @@ Make sure that `gem install fast-stemmer -v '1.0.2'` succeeds before bundling.
   
 
 <script type="text/javascript">
-      var disqus_shortname = 'srabanblog';
+      var disqus_shortname = 'srabankumar-github-io';
       
         
         var disqus_script = 'count.js';

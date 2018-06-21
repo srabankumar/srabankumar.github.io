@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Air-escape 2 - My Notebook</title>
+  <title>'This' Keyword Under the Hood in Javascript - My Notebook</title>
   <meta name="author" content="sraban">
 
   
-  <meta name="description" content="Hi Viewers, Before going to describe about the second version of my game let me describe a small intro about my first game. Actually my first game is &hellip;">
+  <meta name="description" content="Hi Friends, In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://srabankumar.github.io/blog/2016/08/24/air-escape-2/">
+  <link rel="canonical" href="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Notebook" type="application/atom+xml">
@@ -73,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">Air-escape 2</h1>
+      <h1 class="entry-title">'This' Keyword Under the Hood in Javascript</h1>
     
     
       <p class="meta">
@@ -82,7 +82,7 @@
 
 
 
-<time class='entry-date' datetime='2016-08-24T21:46:57+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:46 pm</span></time>
+<time class='entry-date' datetime='2018-06-21T11:59:25+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>11:59 am</span></time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://srabankumar.github.io">Comments</a>
@@ -92,29 +92,76 @@
   </header>
 
 
-<div class="entry-content"><p>Hi Viewers,</p>
+<div class="entry-content"><p>Hi Friends,
+    In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post as simple as possible. let&rsquo;s jump into it .</p>
 
-<p>Before going to describe about the second version of my game let me describe a small intro about my first game. Actually my first game is a small helicopter game in which u have to overcome various obstacles to reach the destination to win it (Not a great game at all).When i started learning javascript and jquery ,then i decided to create that game .It is just simple game without canvas.</p>
+<h3>concept-1</h3>
 
-<p>some drawbacks of my first game:</p>
+<p>When we are declaring a variable or function in javascript it became a property of window object . In the global excution context &lsquo;this&rsquo; keyword always refer to &lsquo;window&rsquo; object. so example:</p>
 
-<p>1)Obstacles are static</p>
+<pre><code>    var a = 'javascript';
+    console.log(a) // javascript
+    console.log(window.a) // javascript
+    console.log(this.a) // javascript
+    function xyz(){
+        console.log(this.a) 
+    }
+    xyz() // javascript
+</code></pre>
 
-<p>2)no level (means difficulty level)</p>
+<h3>concept-2</h3>
 
-<p>3)No score and many more</p>
+<p>&ldquo;this&rdquo; keyword inside a method always refers to calling object .Example:</p>
 
-<p>To Avoid such drawbacks ,i started learning HTML canvas and more on javascript so that i can rectify my errors in the next game.Then I created the second version of that game by using canvas to make it a beautiful one. Then after working for 2 days ,i successfully created the second version of that game by adding some more features in it.Those are:</p>
+<pre><code>    var obj = {
+            name:'javascript',
+            print : function(){
+                console.log(this.name)
+            }
+        }
+        obj.print(); // javascript
+</code></pre>
 
-<p>1)moving objects(obstacles)</p>
+<p>Here object &lsquo;obj&rsquo; is calling &lsquo;print&rsquo; method. so &lsquo;this&rsquo; keyword inside print will refer to object &lsquo;obj&rsquo; .</p>
 
-<p>2)Three Difficulty level(easy,medium and hard)</p>
+<h3>concept-3</h3>
 
-<p>3)Score board</p>
+<p>   When we are using a inner function inside a method then &lsquo;this&rsquo; keyword inside that inner function refers to &lsquo;window&rsquo; object, not calling object.</p>
 
-<p>4)more attractive background than previous one</p>
+<p>Example:</p>
 
-<p>5)Reset Button to play again..</p>
+<pre><code>    var name = 'window';
+    var obj = {
+            name:'javascript',
+            print : function(){
+                return function(){
+                    console.log(this.name)
+                }
+            }
+        }
+        obj.print()(); // window 
+</code></pre>
+
+<blockquote><p>Then how to fix this .</p></blockquote>
+
+<p>We have to assign &lsquo;this&rsquo; object to some other object inside print function.Now</p>
+
+<pre><code>    var name = 'window';
+    var obj = {
+            name:'javascript',
+            print : function(){
+                var self = this // here we assigned "this" object to self object.
+                return function(){
+                    console.log(self.name)
+                }
+            }
+        }
+        obj.print()(); // javascript
+</code></pre>
+
+<p>I hope these three concepts are clear now.</p>
+
+<p>Happy Coding :)</p>
 </div>
 
 
@@ -130,15 +177,21 @@
 
 
 
-<time class='entry-date' datetime='2016-08-24T21:46:57+05:30'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>24</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:46 pm</span></time>
+<time class='entry-date' datetime='2018-06-21T11:59:25+05:30'><span class='date'><span class='date-month'>Jun</span> <span class='date-day'>21</span><span class='date-suffix'>st</span>, <span class='date-year'>2018</span></span> <span class='time'>11:59 am</span></time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/this-javascript/'>this,javascript</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://srabankumar.github.io/blog/2016/08/24/air-escape-2/" data-via="" data-counturl="http://srabankumar.github.io/blog/2016/08/24/air-escape-2/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/" data-via="" data-counturl="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/" >Tweet</a>
   
   
   
@@ -147,8 +200,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2016/09/05/windows-and-octopress-mystery/" title="Previous Post: Windows and octopress Mystery">&laquo; Windows and octopress Mystery</a>
       
-        <a class="basic-alignment right" href="/blog/2016/08/24/a-funny-app/" title="Next Post: A Funny App">A Funny App &raquo;</a>
       
     </p>
   </footer>
@@ -225,8 +278,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://srabankumar.github.io/blog/2016/08/24/air-escape-2/';
-        var disqus_url = 'http://srabankumar.github.io/blog/2016/08/24/air-escape-2/';
+        var disqus_identifier = 'http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/';
+        var disqus_url = 'http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/';
         var disqus_script = 'embed.js';
       
     (function () {

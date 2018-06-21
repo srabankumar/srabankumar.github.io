@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: This,javascript | My Notebook]]></title>
+  <link href="http://srabankumar.github.io/blog/categories/this-javascript/atom.xml" rel="self"/>
+  <link href="http://srabankumar.github.io/"/>
+  <updated>2018-06-21T14:48:02+05:30</updated>
+  <id>http://srabankumar.github.io/</id>
+  <author>
+    <name><![CDATA[sraban]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA['This' Keyword Under the Hood in Javascript]]></title>
+    <link href="http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/"/>
+    <updated>2018-06-21T11:59:25+05:30</updated>
+    <id>http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript</id>
+    <content type="html"><![CDATA[<p>Hi Friends,
+    In this post we will discuss about &lsquo;this&rsquo; keyword in javascript and how it works in javascript. I will try to make this post as simple as possible. let&rsquo;s jump into it .</p>
+
+<h3>concept-1</h3>
+
+<p>When we are declaring a variable or function in javascript it became a property of window object . In the global excution context &lsquo;this&rsquo; keyword always refer to &lsquo;window&rsquo; object. so example:</p>
+
+<pre><code>    var a = 'javascript';
+    console.log(a) // javascript
+    console.log(window.a) // javascript
+    console.log(this.a) // javascript
+    function xyz(){
+        console.log(this.a) 
+    }
+    xyz() // javascript
+</code></pre>
+
+<h3>concept-2</h3>
+
+<p>&ldquo;this&rdquo; keyword inside a method always refers to calling object .Example:</p>
+
+<pre><code>    var obj = {
+            name:'javascript',
+            print : function(){
+                console.log(this.name)
+            }
+        }
+        obj.print(); // javascript
+</code></pre>
+
+<p>Here object &lsquo;obj&rsquo; is calling &lsquo;print&rsquo; method. so &lsquo;this&rsquo; keyword inside print will refer to object &lsquo;obj&rsquo; .</p>
+
+<h3>concept-3</h3>
+
+<p>   When we are using a inner function inside a method then &lsquo;this&rsquo; keyword inside that inner function refers to &lsquo;window&rsquo; object, not calling object.</p>
+
+<p>Example:</p>
+
+<pre><code>    var name = 'window';
+    var obj = {
+            name:'javascript',
+            print : function(){
+                return function(){
+                    console.log(this.name)
+                }
+            }
+        }
+        obj.print()(); // window 
+</code></pre>
+
+<blockquote><p>Then how to fix this .</p></blockquote>
+
+<p>We have to assign &lsquo;this&rsquo; object to some other object inside print function.Now</p>
+
+<pre><code>    var name = 'window';
+    var obj = {
+            name:'javascript',
+            print : function(){
+                var self = this // here we assigned "this" object to self object.
+                return function(){
+                    console.log(self.name)
+                }
+            }
+        }
+        obj.print()(); // javascript
+</code></pre>
+
+<p>I hope these three concepts are clear now.</p>
+
+<p>Happy Coding :)</p>
+]]></content>
+  </entry>
+  
+</feed>
