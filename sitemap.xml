@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://srabankumar.github.io/blog/2018/06/22/what-is-schema-and-model-in-mongoose/</loc>
+<lastmod>2018-06-22T11:07:52+05:30</lastmod>
+</url>
+<url>
 <loc>http://srabankumar.github.io/blog/2018/06/21/this-keyword-under-the-hood-in-javascript/</loc>
 <lastmod>2018-06-21T11:59:25+05:30</lastmod>
 </url>
@@ -39,5 +43,8 @@
 </url>
 <url>
 <loc>http://srabankumar.github.io/blog/categories/this-javascript/</loc>
+</url>
+<url>
+<loc>http://srabankumar.github.io/blog/categories/mongoose-node-dot-js-mode-schema/</loc>
 </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[My Notebook]]></title>
   <link href="http://srabankumar.github.io/atom.xml" rel="self"/>
   <link href="http://srabankumar.github.io/"/>
-  <updated>2018-06-21T14:55:01+05:30</updated>
+  <updated>2018-06-22T12:22:53+05:30</updated>
   <id>http://srabankumar.github.io/</id>
   <author>
     <name><![CDATA[sraban]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What Is Schema and Model in Mongoose?]]></title>
+    <link href="http://srabankumar.github.io/blog/2018/06/22/what-is-schema-and-model-in-mongoose/"/>
+    <updated>2018-06-22T11:07:52+05:30</updated>
+    <id>http://srabankumar.github.io/blog/2018/06/22/what-is-schema-and-model-in-mongoose</id>
+    <content type="html"><![CDATA[<p>Hi Friends,</p>
+
+<p>  Today we will discuss what is schema and model in mongoose and what is the real purpose behind these concept.</p>
+
+<p>  So let&rsquo;s start. Before going to topic we will discuss about some concept first.</p>
+
+<h2>  CONCEPT</h2>
+
+<p>  1) What is mongoose and why it needed ?</p>
+
+<p>  Ans:  In real world , our server side code(may be java, python, node etc) need to interact with database.For this blog, we will stick with
+        Node and mongoDB. MongoDB stores data in document manner.</p>
+
+<p>  We have object in our node.js code which we need to store in MongoDB.
+  So we need something which can map our object to document so that we can store it in database.That mapper is known as <strong>&ldquo;object document mapper&rdquo; or ODM</strong>.</p>
+
+<blockquote><p>So for Node.js and mongodb we have ODM known as &ldquo;mongoose&rdquo;.</p></blockquote>
+
+<p> Now we are clear about what is mongoose and why it is needed now we will dive into our topic .So we need to understand how &lsquo;Mongoose&rsquo; doing this mapping.</p>
+
+<p> Let&rsquo;s consider our MongoDB  structure.</p>
+
+<pre><code>people               -- &gt; collection name
+-------------
+{
+  id:'1',                ----&gt; document-1
+  name :'Bob'
+}
+{
+  id:'2',                ----&gt; document-2
+  name :'John'
+}   
+</code></pre>
+
+<p>so now we need one blueprint/constructor which can represent common structure of each document present in collection. This blueprint/constructor is known as <strong>&ldquo;Model&rdquo;</strong>. So every object created from this blueprint will be treated as document in mongoDB.Now our server side code will interact with mongoDB document via this &ldquo;Model&rdquo;.</p>
+
+<p>Here if we observe we can say collection consist of a number of Model.</p>
+
+<blockquote><p>so Mongoose automatically looks for the plural version of your model name for  collection name.</p></blockquote>
+
+<pre><code>Example: 
+modelName                   Collection Name
+---------                   ---------------
+Person                       People
+task                         tasks
+</code></pre>
+
+<p>Now our Model need to represent common structure.  We define that structure in a object known as <strong>&lsquo;Schema&rsquo;</strong>. So we need to derive our model from &lsquo;Schema&rsquo;. So in mongoose documentation we can see the below line</p>
+
+<blockquote><p>Models are fancy constructors compiled from Schema definitions. An instance of a model is called a document. Models are responsible for creating and reading documents from the underlying MongoDB database.</p></blockquote>
+
+<p>I hope you understood the concepts of schema and model in mongoose.</p>
+
+<p>You can share your thoughts or doubts in comment section .</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA['This' Keyword Under the Hood in Javascript]]></title>
